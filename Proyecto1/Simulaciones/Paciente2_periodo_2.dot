@@ -1,0 +1,42 @@
+digraph G {
+node [shape=plaintext]
+matriz [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td bgcolor='red'> </td>
+<td bgcolor='red'> </td>
+<td bgcolor='red'> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+</table>
+>];
+}
