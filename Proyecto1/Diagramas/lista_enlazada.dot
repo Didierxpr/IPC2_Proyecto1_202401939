@@ -1,0 +1,45 @@
+digraph ListaEnlazada {
+
+    rankdir=LR;
+    bgcolor="white";
+
+    node [shape=record, style=filled, fillcolor=lightblue];
+
+    ListaPacientes [
+        label="{ListaPacientes|Cabeza}"
+    ];
+
+    NodoPaciente1 [
+        label="{NodoPaciente|Paciente|Siguiente}"
+    ];
+
+    NodoPaciente2 [
+        label="{NodoPaciente|Paciente|Siguiente}"
+    ];
+
+    NodoPaciente3 [
+        label="{NodoPaciente|Paciente|NULL}"
+    ];
+
+    Paciente1 [
+        label="{Paciente|Nombre|Edad|Periodos|Rejilla}"
+    ];
+
+    Paciente2 [
+        label="{Paciente|Nombre|Edad|Periodos|Rejilla}"
+    ];
+
+    Paciente3 [
+        label="{Paciente|Nombre|Edad|Periodos|Rejilla}"
+    ];
+
+    ListaPacientes -> NodoPaciente1;
+
+    NodoPaciente1 -> NodoPaciente2;
+    NodoPaciente2 -> NodoPaciente3;
+
+    NodoPaciente1 -> Paciente1;
+    NodoPaciente2 -> Paciente2;
+    NodoPaciente3 -> Paciente3;
+
+}
