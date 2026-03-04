@@ -29,7 +29,8 @@ class Program
             Console.WriteLine("6. Generar grafica de un paciente");
             Console.WriteLine("7. Simulacion visual completa");
             Console.WriteLine("8. Simulacion paso a paso");
-            Console.WriteLine("9. Salir");
+            Console.WriteLine("9. Graficar lista de pacientes");
+            Console.WriteLine("10. Salir");
             Console.Write("Seleccione una opcion: ");
 
             string opcion = Console.ReadLine();
@@ -69,6 +70,10 @@ class Program
                     break;
 
                 case "9":
+                    GraficarListaPacientes(gestor);
+                    break;
+
+                case "10":
                     salir = true;
                     Console.WriteLine("Saliendo del sistema...");
                     break;
@@ -193,5 +198,14 @@ static void SimulacionManual(GestorPacientes gestor, DetectorPatrones detector)
     }
 
     detector.SimulacionPasoAPaso(paciente);
+}
+static void GraficarListaPacientes(GestorPacientes gestor)
+{
+    GeneradorGraphviz generador = new GeneradorGraphviz();
+
+    string rutaDot = "lista_pacientes.dot";
+
+    generador.GenerarGraficaListaPacientes(gestor.Lista, rutaDot);
+    generador.GenerarImagen(rutaDot);
 }
 }

@@ -1,0 +1,25 @@
+digraph ListaSimple {
+bgcolor="#f5f5f5";
+label="Lista Simple de Pacientes";
+labelloc=t;
+fontsize=24;
+fontcolor="#1565c0";
+fontname="Helvetica Bold";
+node [fontname="Helvetica"];
+edge [fontname="Helvetica"];
+
+node0 [
+    shape=record,
+    style="filled,rounded",
+    fillcolor="lightblue:white",
+    gradientangle=90,
+    color="#1976d2",
+    penwidth=2,
+    label="{
+        Nombre: Lucas |
+        Edad: 33 |
+        Períodos: 15 |
+        Matriz: 10x10
+    }"
+];
+}
